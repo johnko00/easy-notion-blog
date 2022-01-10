@@ -50,11 +50,6 @@ const RenderPosts = ({
           {posts.map(post => {
             return (
               <div className={blogStyles.postPreview} key={post.Slug}>
-                {post.Date && (
-                  <div className="posted">
-                    📅&nbsp;&nbsp;{getDateStr(post.Date)}
-                  </div>
-                )}
                 <h3>
                   <div className={blogStyles.titleContainer}>
                     <Link
@@ -66,6 +61,9 @@ const RenderPosts = ({
                     </Link>
                   </div>
                 </h3>
+                {post.Date && (
+                  <div className="posted">{getDateStr(post.Date)}</div>
+                )}
                 <div className={blogStyles.tagContainer}>
                   {post.Tags &&
                     post.Tags.length > 0 &&
