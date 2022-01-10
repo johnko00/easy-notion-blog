@@ -74,7 +74,7 @@ const RenderPosts = ({
                         key={`${post.Slug}-${tag}`}
                         passHref
                       >
-                        <a className={blogStyles.tag}>🔖&nbsp;&nbsp;{tag}</a>
+                        <a className={blogStyles.tag}>{tag}</a>
                       </Link>
                     ))}
                 </div>
